@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analog Clock | Kyle Verdan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/clock.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="rog-nav">
+  <div class="nav-left">
+    <h2>PORTFOLIO</h2>
+    <a href="projects.html" class="nav-back">← BACK TO PROJECTS</a>
+  </div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a class="active" href="clock.html">CLOCK</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="rog-hero">
+  <h1>ANALOG CLOCK</h1>
+  <p>ROG INSPIRED INTERFACE</p>
+</section>
+
+<!-- CLOCK -->
+<section class="clock-wrapper">
+
+  <div class="clock">
+    <!-- NUMBERS -->
+    <span style="--i:1">1</span>
+    <span style="--i:2">2</span>
+    <span style="--i:3">3</span>
+    <span style="--i:4">4</span>
+    <span style="--i:5">5</span>
+    <span style="--i:6">6</span>
+    <span style="--i:7">7</span>
+    <span style="--i:8">8</span>
+    <span style="--i:9">9</span>
+    <span style="--i:10">10</span>
+    <span style="--i:11">11</span>
+    <span style="--i:12">12</span>
+
+    <!-- HANDS -->
+    <div class="hand hour" id="hour"></div>
+    <div class="hand minute" id="minute"></div>
+    <div class="hand second" id="second"></div>
+
+    <div class="center"></div>
+  </div>
+
+  <p class="desc">
+    A ROG-inspired analog clock built with clean HTML, CSS, and accurate real-time JavaScript.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="rog-footer">
+  <p>© 2025 Kyle Montilla Verdan | BSIT Student Portfolio</p>
+</footer>
+
+<script src="clock.js"></script>
+</body>
+</html>

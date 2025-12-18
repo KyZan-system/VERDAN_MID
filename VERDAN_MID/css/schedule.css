@@ -1,0 +1,197 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.85)
+    ),
+    url("../images/BG.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* ===== NAV ===== */
+.rog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #ff1e1e;
+  background: #000;
+}
+
+.rog-nav h2 {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+}
+
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* RED LINE */
+.rog-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  transition: width 0.3s ease;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+.rog-nav nav a:hover::after,
+.rog-nav nav .active::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.rog-hero {
+  text-align: center;
+  padding: 90px 20px 40px;
+}
+
+.rog-hero h1 {
+  font-size: 70px;
+  letter-spacing: 6px;
+  color: #ff1e1e;
+  text-shadow: 0 0 20px rgba(255,30,30,0.8);
+}
+
+.rog-hero p {
+  margin-top: 10px;
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+/* ===== DAY TABS ===== */
+.day-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 30px 0 20px;
+  flex-wrap: wrap;
+}
+
+.day-tab {
+  background: #000;
+  border: 1px solid #222;
+  color: #aaa;
+  padding: 8px 14px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.day-tab:hover,
+.day-tab.active {
+  color: #ff1e1e;
+  border-color: #ff1e1e;
+}
+
+/* ===== CONTENT ===== */
+.schedule-container {
+  max-width: 900px;
+  margin: 40px auto 120px;
+  padding: 0 40px;
+}
+
+.schedule-day {
+  display: none;
+}
+
+.schedule-day.active {
+  display: block;
+}
+
+/* ===== INTERACTIVE CARD ===== */
+.schedule-card {
+  border: 1px solid #222;
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff1e1e;
+  box-shadow: 0 12px 30px rgba(255,30,30,0.25);
+}
+
+.schedule-card h3 {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.schedule-card p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.schedule-card span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* ===== FOOTER ===== */
+.rog-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 12px;
+}
+/* ===== BACK BUTTON ===== */
+.back-wrapper {
+  padding: 14px 60px 0;
+}
+
+.nav-back {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #777;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-back:hover {
+  color: #ff1e1e;
+  border-bottom-color: #ff1e1e;
+}

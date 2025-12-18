@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Kyle Verdan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="rog-nav">
+  <div class="nav-left">
+    <h2>PORTFOLIO</h2>
+    <a href="projects.html" class="nav-back">← BACK TO PROJECTS</a>
+  </div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a class="active" href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="rog-hero">
+  <h1>GALLERY</h1>
+  <p>ROG VISUAL SYSTEM</p>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-wrapper">
+
+  <div class="gallery-container" id="gallery">
+
+    <div class="gallery-slide active">
+      <img src="images/K1.webp" alt="Keyboard">
+      <h3>MECHANICAL KEYBOARD</h3>
+      <p>RGB / Custom Build</p>
+    </div>
+
+    <div class="gallery-slide">
+      <img src="images/M1.webp" alt="Mouse">
+      <h3>GAMING MOUSE</h3>
+      <p>Precision & Performance</p>
+    </div>
+
+    <div class="gallery-slide">
+      <img src="images/B1.webp" alt="Headset">
+      <h3>EARBUDS</h3>
+      <p>Immersive Audio</p>
+    </div>
+
+    <div class="gallery-slide">
+      <img src="images/S1.webp" alt="Monitor">
+      <h3>MONITOR</h3>
+      <p>Full HD Display</p>
+    </div>
+
+  </div>
+
+  <!-- INDICATOR -->
+  <div class="gallery-indicator">
+    <span id="current">1</span> / <span id="total">4</span>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="rog-footer">
+  <p>© 2025 Kyle Montilla Verdan | BSIT Student Portfolio</p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  const slides = document.querySelectorAll('.gallery-slide');
+  const total = slides.length;
+  const currentText = document.getElementById('current');
+  const totalText = document.getElementById('total');
+  const gallery = document.getElementById('gallery');
+
+  let index = 0;
+  let startX = 0;
+
+  totalText.textContent = total;
+
+  function showSlide(i) {
+    slides.forEach(s => s.classList.remove('active'));
+
+    if (i >= total) index = 0;
+    else if (i < 0) index = total - 1;
+    else index = i;
+
+    slides[index].classList.add('active');
+    currentText.textContent = index + 1;
+  }
+
+  gallery.addEventListener('click', e => {
+    const mid = gallery.offsetWidth / 2;
+    if (e.clientX < mid) showSlide(index - 1);
+    else showSlide(index + 1);
+  });
+
+  gallery.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+  });
+
+  gallery.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) showSlide(index + 1);
+    if (endX - startX > 50) showSlide(index - 1);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') showSlide(index + 1);
+    if (e.key === 'ArrowLeft') showSlide(index - 1);
+  });
+</script>
+
+</body>
+</html>

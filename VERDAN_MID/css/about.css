@@ -1,0 +1,220 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.85)
+    ),
+    url("../images/BG.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* ===== NAV ===== */
+.rog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #ff1e1e;
+  background: #000;
+}
+
+.rog-nav h2 {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+}
+
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.rog-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  transition: width 0.3s ease;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+.rog-nav nav a:hover::after,
+.rog-nav nav .active::after {
+  width: 100%;
+}
+
+/* ===== HERO (MATCH RECIPE) ===== */
+.about-hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.about-hero h1 {
+  font-size: 64px;
+  letter-spacing: 6px;
+  color: #ff1e1e;
+  text-shadow: 0 0 20px rgba(255,30,30,0.8);
+}
+
+.about-hero p {
+  margin-top: 10px;
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+/* ===== CONTENT (MATCH RECIPE) ===== */
+.about-container {
+  max-width: 1200px;
+  margin: 60px auto 120px;
+  padding: 0 40px;
+  display: flex;
+  gap: 60px;
+}
+
+/* ===== PROFILE CARD ===== */
+.profile-card {
+  width: 320px;
+  border: 1px solid #222;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.profile-card img {
+  width: 100%;
+  border: 2px solid #ff1e1e;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.profile-card h2 {
+  color: #ff1e1e;
+  letter-spacing: 1px;
+}
+
+.profile-card span {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.profile-card:hover {
+  border-color: #ff1e1e;
+  box-shadow: 0 0 25px rgba(255,30,30,0.35);
+  transform: translateY(-6px);
+}
+
+.profile-card:hover img {
+  box-shadow: 0 0 25px rgba(255,30,30,0.7);
+  transform: scale(1.03);
+}
+
+/* ===== INFO SECTION ===== */
+.about-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-box {
+  border: 1px solid #222;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.info-box h3 {
+  color: #ff1e1e;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.info-box p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.info-box ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* ===== FOOTER ===== */
+.rog-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 12px;
+}
+/* ===== PROFILE CARD INTERACTIONS ===== */
+.profile-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+  border-color: #ff1e1e;
+  box-shadow:
+    0 0 25px rgba(255,30,30,0.35),
+    0 0 60px rgba(255,30,30,0.15);
+}
+
+/* PROFILE IMAGE */
+.profile-card img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255,30,30,0.7);
+}
+
+/* INFO BOX INTERACTIONS */
+.info-box {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-6px);
+  border-color: #ff1e1e;
+  box-shadow:
+    0 0 25px rgba(255,30,30,0.35);
+}
+
+.info-box:hover h3 {
+  text-shadow: 0 0 10px rgba(255,30,30,0.9);
+}

@@ -1,0 +1,290 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY (MATCHES PROJECTS & MEDIA) ===== */
+body {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.85)
+    ),
+    url("../images/BG.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #fff;
+}
+
+/* ===== NAV ===== */
+.rog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #ff1e1e;
+  background: #000;
+}
+
+.rog-nav h2 {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+}
+
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* RED LINE EFFECT */
+.rog-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  transition: width 0.3s ease;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+.rog-nav nav a:hover::after,
+.rog-nav nav .active::after {
+  width: 100%;
+}
+
+/* ===== HERO (DISTANCE UNCHANGED) ===== */
+.recipe-hero {
+  text-align: center;
+  padding: 100px 20px 40px; /* ❗ unchanged */
+}
+
+.recipe-hero h1 {
+  font-size: 70px;
+  letter-spacing: 6px;
+  color: #ff1e1e;
+  text-shadow: 0 0 20px rgba(255, 30, 30, 0.8); /* GLOW ONLY HERE */
+}
+
+.recipe-hero p {
+  margin-top: 10px;
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+/* ===== CONTENT (DISTANCE UNCHANGED) ===== */
+.recipe-container {
+  max-width: 900px;
+  margin: 60px auto 120px; /* ❗ unchanged */
+  padding: 0 40px;
+}
+
+.recipe-box {
+  border: 1px solid #222;
+  background: rgba(0,0,0,0.7);
+  padding: 40px; /* ❗ unchanged */
+}
+
+/* IMAGE */
+.recipe-image {
+  margin-bottom: 30px;
+}
+
+.recipe-image img {
+  width: 100%;
+  display: block;
+  border: 1px solid #222;
+}
+
+/* TEXT */
+.recipe-box h3 {
+  color: #ff1e1e;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.recipe-box h4 {
+  color: #ff1e1e;
+  margin: 25px 0 10px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.recipe-box p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.recipe-box ul,
+.recipe-box ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.recipe-box li {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+.rog-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 12px;
+}
+/* ===== NAV LEFT STACK ===== */
+.nav-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== BACK BUTTON (NAV) ===== */
+.nav-back {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #777;
+  width: fit-content;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+  color: #ff1e1e;
+  border-bottom-color: #ff1e1e;
+}
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;              /* REQUIRED */
+  transition: color 0.3s ease;
+}
+
+/* RED LINE */
+.rog-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  transition: width 0.3s ease;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+.rog-nav nav a:hover::after,
+.rog-nav nav .active::after {
+  width: 100%;
+}
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== BODY ===== */
+body {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,0,0,0.85),
+      rgba(0,0,0,0.65),
+      rgba(0,0,0,0.85)
+    ),
+    url("../images/BG.png");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* ===== HERO ===== */
+.recipe-hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.recipe-hero h1 {
+  font-size: 70px;
+  letter-spacing: 6px;
+  color: #ff1e1e;
+  text-shadow: 0 0 20px rgba(255,30,30,0.8);
+}
+
+.recipe-hero p {
+  margin-top: 10px;
+  color: #888;
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+/* ===== CONTENT ===== */
+.recipe-container {
+  max-width: 900px;
+  margin: 60px auto 120px;
+  padding: 0 40px;
+}
+
+.recipe-box {
+  border: 1px solid #222;
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.recipe-box:hover {
+  transform: translateY(-6px);
+  border-color: #ff1e1e;
+  box-shadow: 0 12px 30px rgba(255,30,30,0.25);
+}
+
+/* ===== FOOTER ===== */
+.rog-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 12px;
+}

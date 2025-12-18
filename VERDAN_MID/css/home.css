@@ -1,0 +1,217 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #000;
+  color: #fff;
+}
+
+/* ===== NAV ===== */
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+  position: relative;              /* REQUIRED */
+  transition: color 0.3s ease;
+}
+
+/* RED LINE */
+.rog-nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #ff1e1e;
+  transition: width 0.3s ease;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+.rog-nav nav a:hover::after,
+.rog-nav nav .active::after {
+  width: 100%;
+}
+
+.rog-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 2px solid #ff1e1e;
+}
+
+.rog-nav h2 {
+  color: #ff1e1e;
+  letter-spacing: 2px;
+}
+
+.rog-nav nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.rog-nav nav a:hover,
+.rog-nav nav .active {
+  color: #ff1e1e;
+}
+
+/* ===== HERO (DUMMY BACKGROUND) ===== */
+.home-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+
+  /* DUMMY ROG BACKGROUND */
+  background:
+    linear-gradient(
+      135deg,
+      #ff1e1e 0%,
+      #1a0000 40%,
+      #000 70%
+    );
+
+  background-size: cover;
+  background-position: center;
+}
+
+.home-hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+
+  /* PURE IMAGE — NO FILTER */
+  background-image: url("../images/BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-content h1 {
+  font-size: 78px;
+  line-height: 1;
+  letter-spacing: 6px;
+}
+
+.hero-content span {
+  color: #ff1e1e;
+  text-shadow: 0 0 30px rgba(255, 30, 30, 1);
+}
+
+.hero-content p {
+  margin: 20px 0;
+  color: #aaa;
+  letter-spacing: 3px;
+  font-size: 13px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 40px;
+  border: 2px solid #ff1e1e;
+  color: #ff1e1e;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.cta:hover {
+  background: #ff1e1e;
+  color: #000;
+  box-shadow: 0 0 25px rgba(255, 30, 30, 0.9);
+}
+
+/* ===== SYSTEM INFO ===== */
+.system-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 80px;
+  gap: 30px;
+}
+
+.info-box {
+  border: 1px solid #222;
+  padding: 30px;
+  text-align: center;
+}
+
+.info-box h3 {
+  color: #ff1e1e;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.info-box p {
+  color: #ccc;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 80px;
+  gap: 40px;
+}
+
+.feature {
+  border: 1px solid #222;
+  padding: 40px;
+}
+
+.feature h2 {
+  color: #ff1e1e;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.feature p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+.rog-footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+  color: #666;
+  font-size: 12px;
+}
+/* ===== INTERACTIVE HOVER EFFECT ===== */
+.info-box,
+.feature,
+.profile-card,
+.contact-info,
+.contact-form {
+  transition: all 0.3s ease;
+}
+
+.info-box:hover,
+.feature:hover,
+.profile-card:hover,
+.contact-info:hover,
+.contact-form:hover {
+  border-color: #ff1e1e;
+  box-shadow: 0 0 25px rgba(255,30,30,0.35);
+  transform: translateY(-6px);
+}
+.info-box:hover h3,
+.feature:hover h2 {
+  text-shadow: 0 0 10px rgba(255,30,30,0.9);
+}

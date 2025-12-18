@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator | Kyle Verdan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="rog-nav">
+  <div class="nav-left">
+    <h2>PORTFOLIO</h2>
+    <a href="projects.html" class="nav-back">← BACK TO PROJECTS</a>
+  </div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+ <a class="active" href="calculator.html">CALCULATOR</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="rog-hero">
+  <h1>CALCULATOR</h1>
+  <p>ROG INSPIRED INTERFACE</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-wrapper">
+
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="append('/')">÷</button>
+      <button onclick="append('*')">×</button>
+      <button onclick="deleteLast()">⌫</button>
+
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="calculate()">=</button>
+
+      <button class="zero" onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+    </div>
+  </div>
+
+  <p class="desc">
+    A ROG-inspired calculator built with clean HTML and CSS
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="rog-footer">
+  <p>© 2025 Kyle Montilla Verdan | BSIT Student Portfolio</p>
+</footer>
+
+<script src="calculator.js"></script>
+</body>
+</html>

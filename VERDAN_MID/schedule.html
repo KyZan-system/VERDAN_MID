@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule | Kyle Verdan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+
+<!-- NAV -->
+<header class="rog-nav">
+  <div class="nav-left">
+    <h2>PORTFOLIO</h2>
+    <a href="projects.html" class="nav-back">← BACK TO PROJECTS</a>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a class="active" href="schedule.html">SCHEDULE</a>
+    <a href="contact.html">CONTACT</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="rog-hero">
+  <h1>SCHEDULE</h1>
+  <p>WEEKLY CLASS OVERVIEW</p>
+</section>
+
+<!-- DAY TABS -->
+<div class="day-tabs">
+  <button class="day-tab active" data-day="mon">MON</button>
+  <button class="day-tab" data-day="tue">TUE</button>
+  <button class="day-tab" data-day="wed">WED</button>
+  <button class="day-tab" data-day="thu">THU</button>
+  <button class="day-tab" data-day="fri">FRI</button>
+  <button class="day-tab" data-day="sat">SAT</button>
+  <button class="day-tab" data-day="sun">SUN</button>
+</div>
+
+<!-- CONTENT -->
+<section class="schedule-container">
+
+  <div class="schedule-day active" id="mon">
+    <div class="schedule-card">
+      <h3>CIS212</h3>
+      <p>Web Programming</p>
+      <span>7:00 AM – 12:00 PM</span>
+    </div>
+  </div>
+
+  <div class="schedule-day" id="tue">
+    <p class="empty">No scheduled classes</p>
+  </div>
+
+  <div class="schedule-day" id="wed">
+    <div class="schedule-card">
+      <h3>PE21</h3>
+      <p>Physical Education</p>
+      <span>8:00 AM – 10:00 AM</span>
+    </div>
+
+    <div class="schedule-card">
+      <h3>OLIV201</h3>
+      <p>College Values</p>
+      <span>10:00 AM – 12:00 PM</span>
+    </div>
+  </div>
+
+  <div class="schedule-day" id="thu">
+    <div class="schedule-card">
+      <h3>SS102</h3>
+      <p>Social Science</p>
+      <span>7:00 AM – 10:00 AM</span>
+    </div>
+
+    <div class="schedule-card">
+      <h3>FIL12</h3>
+      <p>Filipino</p>
+      <span>12:00 PM – 3:00 PM</span>
+    </div>
+  </div>
+
+  <div class="schedule-day" id="fri">
+    <p class="empty">No scheduled classes</p>
+  </div>
+
+  <div class="schedule-day" id="sat">
+    <div class="schedule-card">
+      <h3>IT212</h3>
+      <p>Database Systems</p>
+      <span>7:00 AM – 12:00 PM</span>
+    </div>
+
+    <div class="schedule-card">
+      <h3>IT211</h3>
+      <p>Networking</p>
+      <span>3:00 PM – 8:00 PM</span>
+    </div>
+  </div>
+
+  <div class="schedule-day" id="sun">
+    <p class="empty">No scheduled classes</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="rog-footer">
+  <p>© 2025 Kyle Verdan | BSIT Student Portfolio</p>
+</footer>
+
+<!-- TAB SCRIPT -->
+<script>
+  const tabs = document.querySelectorAll('.day-tab');
+  const days = document.querySelectorAll('.schedule-day');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      days.forEach(d => d.classList.remove('active'));
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.day).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
